@@ -15,10 +15,15 @@ export class TodoItem extends Component {
         const { id, title } = this.props.todo;
         return (
             <div style={this.getStyle()}>
-                <p>
+                {/* <p>
                     <input type="checkbox" onChange={this.props.toggleState.bind(this, id)} style={checkboxStyle}/>{title}
                     <button onClick={this.props.deleteItem.bind(this, id)} style={btnStyle}>&times;</button>
-                </p>
+                </p> */}
+                <div className="item-contents">
+                    <div className="checkbox"><input type="checkbox" onChange={this.props.toggleState.bind(this, id)}/></div>
+                    <div className="item-title">{ title }</div>
+                    <div className="btn-delete" onClick={this.props.deleteItem.bind(this, id)}><i className="fas fa-times-circle"></i></div>
+                </div>
             </div>
         )
     }
@@ -31,7 +36,7 @@ TodoItem.propTypes = {
     toggleState: PropTypes.func.isRequired
 }
 
-const btnStyle = {
+/* const btnStyle = {
     width: 'fit-content',
     height: 'fit-content',
     color: 'grey',
@@ -50,6 +55,6 @@ const checkboxStyle = {
     marginRight: '10px',
     width: '20px',
     height: '20px'
-}
+} */
 
 export default TodoItem;

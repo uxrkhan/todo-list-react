@@ -5,6 +5,7 @@ import Header from './components/layout/Header'
 import AddItem from './components/AddItem';
 import About from './components/pages/About';
 import NoItems from './components/NoItems';
+import {Link} from 'react-router-dom';
 import {v4 as uuid} from 'uuid';  // if does not work, try 'const uuid = require('require')'
 
 import './App.css';
@@ -90,7 +91,7 @@ class App extends Component {
               <AddItem addItem={this.addItem} clearAll={this.clearAll}/>
               <NoItems isEmpty={this.state.isEmpty}/>
               <Todos todos={this.state.todos} deleteItem={this.deleteItem} toggleState={this.toggleState}/>
-              <div className="footer"><a href="/about">About</a></div>
+              <div className="footer"><Link to="/about">About</Link></div>
             </React.Fragment>
           )}/>
           <Route path="/about" component={About}/> 

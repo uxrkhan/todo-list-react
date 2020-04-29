@@ -21,10 +21,11 @@ a {
 
 }
 
-.links {
+.header-links {
   color: #ddd;
 }
 
+/* Submit and Clear */
 .btn {
   display: inline-block;
   border: none;
@@ -46,6 +47,7 @@ a {
   background: #741414
 }
 
+/* No items */
 .no-items {
   padding: 20px;
   text-align: center;
@@ -53,6 +55,42 @@ a {
   color: #818181;
 }
 
+/* Todo Items */
+.item-contents {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  gap: 5px;
+}
+
+.checkbox  {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 2px;
+}
+
+.checkbox input {
+  width: 20px;
+  height: 20px;
+
+}
+
+.item-title {
+  padding: 2px 0px;
+}
+
+.btn-delete {
+  color: #972626;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 2px;
+  font-size: 20px;
+}
+
+.btn-delete:hover {
+  color: #750f0f;
+}
+/* Footer */
 .footer {
   width: 100%;
   padding: 10px 20px;
